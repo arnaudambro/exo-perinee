@@ -4,6 +4,8 @@ import Motif1, { motif1animationCss, motif1params } from './Motif1';
 import Motif2, { motif2animationCss, motif2params } from './Motif2';
 import Exercice from './Exercice';
 
+window.location.reload(true)
+
 const AppContainer = styled.div`
   background: pink;
   height: 100%;
