@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import Motif1, { motif1animationCss, motif1params } from './Motif1';
+import Motif2, { motif2animationCss, motif2params } from './Motif2';
+import Exercice from './Exercice';
+
+const AppContainer = styled.div`
+  background: pink;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <Exercice
+        Motif={Motif1}
+        motifAnimationCss={motif1animationCss}
+        motifParams={motif1params}
+      />
+      <Exercice
+        Motif={Motif2}
+        motifAnimationCss={motif2animationCss}
+        motifParams={motif2params}
+      />
+    </AppContainer>
   );
 }
 
